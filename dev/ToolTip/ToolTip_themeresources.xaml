@@ -3,6 +3,21 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <StaticResource x:Key="ToolTipBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+            <Thickness x:Key="ToolTipBorderThemePadding">8,5,8,7</Thickness>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="HighContrast">
+            <StaticResource x:Key="ToolTipBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+            <Thickness x:Key="ToolTipBorderThemePadding">8,5,8,7</Thickness>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Light">
+            <StaticResource x:Key="ToolTipBorderBrush" ResourceKey="SystemControlTransientBorderBrush" />
+            <Thickness x:Key="ToolTipBorderThemePadding">8,5,8,7</Thickness>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
     <Style TargetType="ToolTip">
         <Setter Property="Foreground" Value="{ThemeResource ToolTipForeground}" />
         <Setter Property="Background" Value="{ThemeResource ToolTipBackground}" />
