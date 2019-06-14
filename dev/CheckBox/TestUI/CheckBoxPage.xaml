@@ -11,8 +11,9 @@
 
     <StackPanel>
         <CheckBox Content="Two-state CheckBox"/>
-
         <CheckBox Content="Three-state CheckBox" IsThreeState="True"/>
+        <CheckBox Content="Cornered CheckBox" CornerRadius="2"/>
+        <CheckBox Content="Cornered Three-state CheckBox" IsThreeState="True" CornerRadius="2"/>
     </StackPanel>
 
 </local:TestPage>
