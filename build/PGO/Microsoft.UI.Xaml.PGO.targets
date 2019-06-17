@@ -19,7 +19,7 @@
     </ItemDefinitionGroup>
 
     <!-- Include pgort140.dll in the app package -->
-    <ItemGroup Condition="'$(Configuration)' == 'Release' and '$(PGOBuildMode)' == 'Instrument'">
+    <!--ItemGroup Condition="'$(Configuration)' == 'Release' and '$(PGOBuildMode)' == 'Instrument'">
         <None Include="$(VC_PGO_RunTime_Dir)\pgort140.dll">
             <Link>%(Filename)%(Extension)</Link>
             <DeploymentContent>true</DeploymentContent>
@@ -27,7 +27,7 @@
             <InProject>false</InProject>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
-    </ItemGroup>
+    </ItemGroup-->
 
     <!-- Enable PGO optimization only for if the pgds file exists. -->
     <ItemDefinitionGroup Condition="'$(Configuration)' == 'Release' and '$(PGOBuildMode)' == 'Optimize' and Exists('$(ProfileGuidedDatabaseFileName)')">
