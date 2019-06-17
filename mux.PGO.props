@@ -6,7 +6,8 @@
         <!--ProfileGuidedDatabaseFileName>$(MSBuildThisFileDirectory)$(PlatformShortName)\Microsoft.UI.Xaml.pgd</ProfileGuidedDatabaseFileName-->
         <ProfileGuidedDatabaseFileName>$(MSBuildThisFileDirectory)Microsoft.UI.Xaml.pgd</ProfileGuidedDatabaseFileName>
     </PropertyGroup>
-    <PropertyGroup>    
+	<!-- Arm builds fail, so ignore pgo for arm -->
+    <PropertyGroup Condition="'$(Platform)'!='ARM' and '$(Platform)'!='ARM64'">    
             <PGOBuildMode Condition="'$(PGOBuildMode)'==''">Instrument</PGOBuildMode>
             <!--PGOBuildMode Condition="'$(PGOBuildMode)'==''">Optimize</PGOBuildMode-->
     </PropertyGroup>
